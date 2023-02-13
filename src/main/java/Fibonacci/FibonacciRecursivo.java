@@ -12,28 +12,19 @@ public class FibonacciRecursivo {
 
     public static void main(String[] args) {
 
-        int n = 0;
-
-        for (int i = 0; i < 10; i++) {
-
-            fibonacciRecursivo(n++);
-
-        }
+        System.out.println(fibonacciRecursivo(5));
 
     }
 
-    public static void fibonacciRecursivo(int n) {
-        
-        int aux;
-        aux = (n - 1) + (n- 2);
-        
-        aux = n;
+    public static int fibonacciRecursivo(int n) {
 
-        if (n < 0) {
+        if (n < 2) {
+
+            return n;
 
         } else {
 
-            System.out.println(n);
+            return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
 
         }
 
